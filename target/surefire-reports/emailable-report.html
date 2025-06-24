@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Surefire suite</th></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">23,169</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">gettingStarted.TestNGTest</td><td><a href="#m0">testCreateNewEmployee</a></td><td rowspan="1">1750750892064</td><td rowspan="1">5914</td></tr><tr class="failedeven"><td><a href="#m1">testEmployeeListNavigation</a></td><td rowspan="1">1750750897984</td><td rowspan="1">3530</td></tr><tr class="failedeven"><td><a href="#m2">testFillEmployeeDetails</a></td><td rowspan="1">1750750901516</td><td rowspan="1">2872</td></tr><tr class="failedeven"><td><a href="#m3">testLoginForUserFromAI</a></td><td rowspan="1">1750750904389</td><td rowspan="1">2588</td></tr></tbody>
+</table>
+<h2>Surefire test</h2><h3 id="m0">gettingStarted.TestNGTest#testCreateNewEmployee</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.openai.errors.RateLimitException: 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+	at com.openai.errors.RateLimitException$Builder.build(RateLimitException.kt:88)
+	at com.openai.core.handlers.ErrorHandler$withErrorHandler$1.handle(ErrorHandler.kt:73)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl$WithRawResponseImpl$create$1.invoke(ChatCompletionServiceImpl.kt:121)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl$WithRawResponseImpl$create$1.invoke(ChatCompletionServiceImpl.kt:119)
+	at com.openai.core.http.HttpResponseForKt$parseable$1$parsed$2.invoke(HttpResponseFor.kt:14)
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74)
+	at com.openai.core.http.HttpResponseForKt$parseable$1.getParsed(HttpResponseFor.kt:14)
+	at com.openai.core.http.HttpResponseForKt$parseable$1.parse(HttpResponseFor.kt:16)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl.create(ChatCompletionServiceImpl.kt:55)
+	at com.openai.services.blocking.chat.ChatCompletionService.create(ChatCompletionService.kt:48)
+	at utilities.OpenAIHelper.GetLocatorsForPageAsJson(OpenAIHelper.java:25)
+	at gettingStarted.TestNGTest.testCreateNewEmployee(TestNGTest.java:72)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">gettingStarted.TestNGTest#testEmployeeListNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.openai.errors.RateLimitException: 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+	at com.openai.errors.RateLimitException$Builder.build(RateLimitException.kt:88)
+	at com.openai.core.handlers.ErrorHandler$withErrorHandler$1.handle(ErrorHandler.kt:73)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl$WithRawResponseImpl$create$1.invoke(ChatCompletionServiceImpl.kt:121)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl$WithRawResponseImpl$create$1.invoke(ChatCompletionServiceImpl.kt:119)
+	at com.openai.core.http.HttpResponseForKt$parseable$1$parsed$2.invoke(HttpResponseFor.kt:14)
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74)
+	at com.openai.core.http.HttpResponseForKt$parseable$1.getParsed(HttpResponseFor.kt:14)
+	at com.openai.core.http.HttpResponseForKt$parseable$1.parse(HttpResponseFor.kt:16)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl.create(ChatCompletionServiceImpl.kt:55)
+	at com.openai.services.blocking.chat.ChatCompletionService.create(ChatCompletionService.kt:48)
+	at utilities.OpenAIHelper.GetLocatorsForPageAsJson(OpenAIHelper.java:25)
+	at gettingStarted.TestNGTest.testEmployeeListNavigation(TestNGTest.java:64)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">gettingStarted.TestNGTest#testFillEmployeeDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.openai.errors.RateLimitException: 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+	at com.openai.errors.RateLimitException$Builder.build(RateLimitException.kt:88)
+	at com.openai.core.handlers.ErrorHandler$withErrorHandler$1.handle(ErrorHandler.kt:73)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl$WithRawResponseImpl$create$1.invoke(ChatCompletionServiceImpl.kt:121)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl$WithRawResponseImpl$create$1.invoke(ChatCompletionServiceImpl.kt:119)
+	at com.openai.core.http.HttpResponseForKt$parseable$1$parsed$2.invoke(HttpResponseFor.kt:14)
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74)
+	at com.openai.core.http.HttpResponseForKt$parseable$1.getParsed(HttpResponseFor.kt:14)
+	at com.openai.core.http.HttpResponseForKt$parseable$1.parse(HttpResponseFor.kt:16)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl.create(ChatCompletionServiceImpl.kt:55)
+	at com.openai.services.blocking.chat.ChatCompletionService.create(ChatCompletionService.kt:48)
+	at utilities.OpenAIHelper.GetLocatorsForPageAsJson(OpenAIHelper.java:25)
+	at gettingStarted.TestNGTest.testFillEmployeeDetails(TestNGTest.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">gettingStarted.TestNGTest#testLoginForUserFromAI</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.openai.errors.RateLimitException: 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+	at com.openai.errors.RateLimitException$Builder.build(RateLimitException.kt:88)
+	at com.openai.core.handlers.ErrorHandler$withErrorHandler$1.handle(ErrorHandler.kt:73)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl$WithRawResponseImpl$create$1.invoke(ChatCompletionServiceImpl.kt:121)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl$WithRawResponseImpl$create$1.invoke(ChatCompletionServiceImpl.kt:119)
+	at com.openai.core.http.HttpResponseForKt$parseable$1$parsed$2.invoke(HttpResponseFor.kt:14)
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74)
+	at com.openai.core.http.HttpResponseForKt$parseable$1.getParsed(HttpResponseFor.kt:14)
+	at com.openai.core.http.HttpResponseForKt$parseable$1.parse(HttpResponseFor.kt:16)
+	at com.openai.services.blocking.chat.ChatCompletionServiceImpl.create(ChatCompletionServiceImpl.kt:55)
+	at com.openai.services.blocking.chat.ChatCompletionService.create(ChatCompletionService.kt:48)
+	at utilities.OpenAIHelper.GetLocatorsForPageAsJson(OpenAIHelper.java:25)
+	at gettingStarted.TestNGTest.testLoginForUserFromAI(TestNGTest.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

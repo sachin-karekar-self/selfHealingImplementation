@@ -5,11 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.LocatorReader;
 
 public class LoginPage {
 
     private WebDriver driver;
-
+/* 
     public LoginPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -23,6 +24,13 @@ public class LoginPage {
 
     @FindBy(css = ".btn")
     private WebElement btnLogin;
+*/
+
+/* 
+public LoginPage(WebDriver driver, String pageJson){
+    this.driver = driver;
+    LocatorReader.loadLocatorsFromJson(pageJson);
+}
 
     public HomePage performLogin(String userName, String password) {
         UIElementExtensions.performEnterText(txtUserName, userName);
@@ -30,6 +38,6 @@ public class LoginPage {
         UIElementExtensions.performClick(btnLogin);
         return new HomePage(driver);
     }
-
+*/
 
 }

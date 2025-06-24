@@ -1,48 +1,26 @@
 package pages;
-
-import extensions.UIElementExtensions;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import utilities.LocatorReader;
 
 public class CreateEmployeePage {
 
     private WebDriver driver;
 
-    public CreateEmployeePage(WebDriver driver){
+    public CreateEmployeePage(WebDriver driver, String pageJson){
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+        LocatorReader.loadLocatorsFromJson(pageJson);
     }
 
+    public void fillEmployeeDetails(String name, String lastName, String email, String phone, String department){
+        driver.findElement(LocatorReader.findLocatorByPartialName("Name")).sendKeys(name);
+        driver.findElement(LocatorReader.findLocatorByPartialName("Last Name")).sendKeys(lastName);
+        driver.findElement(LocatorReader.findLocatorByPartialName("Email")).sendKeys(email);
+        driver.findElement(LocatorReader.findLocatorByPartialName("Phone")).sendKeys(phone);
+        driver.findElement(LocatorReader.findLocatorByPartialName("Department")).sendKeys(department);
+    }   
 
-    @FindBy(name = "Name")
-    private WebElement txtName;
-
-    @FindBy(id = "DurationWorked")
-    private WebElement txtDurationWorked;
-
-    @FindBy(name = "Email")
-    private WebElement txtEmail;
-
-    @FindBy(name = "Salary")
-    private WebElement txtSalary;
-
-    @FindBy(name = "Grade")
-    private WebElement ddlGrade;
-
-    @FindBy(css = ".btn")
-    private WebElement btnCreate;
-
-
-    public EmployeeListPage createNewEmployee(String name, String durationWorked, String email, String salary, String grade){
-        UIElementExtensions.performEnterText(txtName, name);
-        UIElementExtensions.performEnterText(txtDurationWorked, durationWorked);
-        UIElementExtensions.performEnterText(txtSalary, salary);
-        UIElementExtensions.performEnterText(txtEmail, email);
-        UIElementExtensions.performDropDownSelectionByText(ddlGrade, grade);
-        UIElementExtensions.performClick(btnCreate);
-        return new EmployeeListPage(driver);
+    public void clickLogoff(){
+        driver.findElement(LocatorReader.findLocatorByPartialName("Log off")).click();
     }
 
 }
